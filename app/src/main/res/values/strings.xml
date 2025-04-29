@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">teletrivia</string>
+    <string-array name="categorias_array">
+        <item>Cultura General</item>
+        <item>Libros</item>
+        <item>Películas</item>
+        <item>Música</item>
+        <item>Computación</item>
+        <item>Matemática</item>
+        <item>Deportes</item>
+        <item>Historia</item>
+    </string-array>
+
+    <string-array name="dificultad_array">
+        <item>Fácil</item>
+        <item>Medio</item>
+        <item>Difícil</item>
+    </string-array>
+
+
+</resources>

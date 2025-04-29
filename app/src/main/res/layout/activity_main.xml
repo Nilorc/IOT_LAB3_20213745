@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorCeleste"
+    android:padding="16dp">
+
+    <!-- Fondo celeste superior con título -->
+    <LinearLayout
+        android:id="@+id/llTitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorCeleste"
+        android:orientation="vertical"
+        android:padding="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvBienvenido"
+            android:layout_width="328dp"
+            android:layout_height="wrap_content"
+            android:text="¡Bienvenido a\nTeleTrivia!"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvDescripcion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:baselineAligned="false"
+            android:text="La app diseñada para testear tu conocimiento y retar a tus amigos! A continuación, elija los parámetros de juego"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- Tarjeta de parámetros -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardParametros"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llTitulo">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Categoría:"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinnerCategoria"
+                android:layout_width="match_parent"
+                android:background="@drawable/spinner_background"
+                android:layout_height="48dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="Cantidad:"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etCantidad"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint=" #Preguntas"
+                android:background="@drawable/edittext_background"
+                android:inputType="number" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="Dificultad:"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinnerDificultad"
+                android:layout_width="match_parent"
+                android:background="@drawable/spinner_background"
+                android:layout_height="48dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnComprobarConexion"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/colorBotonPrimario"
+                    android:drawableStart="@android:drawable/ic_dialog_alert"
+                    android:drawablePadding="8dp"
+                    android:text="Comprobar\nConexión"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/btnComenzar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@android:color/darker_gray"
+                    android:enabled="false"
+                    android:text="Comenzar"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
